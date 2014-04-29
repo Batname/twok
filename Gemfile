@@ -23,7 +23,9 @@ gem 'will_paginate', '3.0.5'
 gem 'capybara', '2.1.0'
 
 # For using attr_accessible
-gem 'protected_attributes'
+#gem 'protected_attributes'
+
+
 gem 'faker', '1.1.2'
 gem 'sprockets', '2.11.0'
 

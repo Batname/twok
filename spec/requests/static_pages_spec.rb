@@ -4,6 +4,12 @@ describe "Static pages" do
 
   subject { page }
 
+
+  shared_examples_for "all static pages" do
+    it { should have_selector('h1', text: heading) }
+    it { should have_title(full_title(page_title)) }
+  end
+
   describe "Home page" do
     before { visit root_path }
 
@@ -33,7 +39,17 @@ describe "Static pages" do
   describe "Contact Page" do
     before { visit contact_path }
 
-    it { should have_content('Contact') }
+    it { should have_selector('h1', text: 'Contact') }
     it { should have_title(full_title('Contact')) }
+  end
+
+
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "ABOUT"
+    expect(page).to have_title(full_title('About'))
+    click_link "CONTACT"
+    expect(page).to have_title(full_title('Contact'))
+
   end
 end
