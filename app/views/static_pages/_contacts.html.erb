@@ -1,0 +1,35 @@
+<div id="part6">
+  <div id="contact">
+    <div class="arrow"><%= image_tag("arrow_green.png", style: "width: 30px") %></div>
+    <div id="contact_panel">
+      <div id="left_pan">
+        <h3>CONTACT</h3>
+        <form method="post" action="formdata.php" name="form1">
+          <table>
+            <tbody><tr>
+              <td colspan="2"><input name="name" class="name" placeholder="NAME (required)" type="text"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input name="email" class="email" placeholder="EMAIL (required)" type="text"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input name="massage" class="massage" placeholder="MASSAGE (required)" type="text"></td>
+            </tr>
+            <tr>
+              <td><%= image_tag("upload.png", style: "width: 170px") %></td>
+              <td><%= image_tag("send.png", style: "width: 170px") %></td>
+            </tr>
+            </tbody></table>
+        </form>
+        <br>
+      </div>
+      <div id="right_pan">
+        <h3>CONTACT</h3>
+        <ul>
+          <li><a href="tel:+111111111111">+111111111111</a> </li>
+          <li><a href="mailto:index_twok@twok.com">index_twok@twok.com</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

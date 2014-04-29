@@ -1,0 +1,23 @@
+<div id="part1">
+  <div id="nav">
+    <ul>
+      <li><%= link_to "ABOUT", about_path %></li>
+      <li><%= link_to "SERVICES", '#' %></li>
+      <li><%= link_to "WORK", '#' %></li>
+      <li><%= link_to "CONTACT", contact_path %></li>
+    </ul>
+    <div class="nav_button"><%= link_to image_tag("menu-button.png", alt: "Rails", style: "width: 35px"), '#' %> </div>
+  </div>
+  <div class="logo">
+    <%= link_to image_tag("title.png", alt: "Rails", style: "width: 500px"), root_path %>
+  </div>
+  <div id="language">
+    <div class="lang_table">
+      <ul class="lang_tab">
+        <li><%= link_to "ENG", '#' %></li>
+        <li><%= link_to "RUS", '#' %></li>
+        <li><%= link_to "EST", '#' %></li>
+      </ul>
+    </div>
+  </div>
+</div>

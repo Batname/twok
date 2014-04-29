@@ -8,13 +8,19 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'bcrypt-ruby', '3.1.2'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
 end
 
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'will_paginate', '3.0.5'
+gem 'capybara', '2.1.0'
 
 # For using attr_accessible
 gem 'protected_attributes'
@@ -57,10 +63,12 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development]
 
 group :test do
-  gem 'capybara', '1.1.2'
+
   gem 'factory_girl_rails', '~> 4.4.1'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 gem "rspec-rails", :group => [:development, :test]
+
+gem 'growl', '1.0.3'

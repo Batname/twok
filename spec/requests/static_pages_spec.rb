@@ -2,50 +2,38 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Twok Company'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Twok Company')
-    end
-    it "should have the title 'Home'" do
-      visit '/static_pages/home'
-
-      def have_title()
-        ("TWOK - IMAGINATION IN DETAILS | Home")
-      end
-    end
+    it { should have_content('WHO WE ARE') }
+    it { should have_content('OUR SERVICES') }
+    it { should have_content('SAY HELLO') }
+    it { should have_content('CONTACT') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('|Home') }
 
   end
+
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
-
-    it "should have the title 'Help'" do
-      visit '/static_pages/help'
-
-      def have_title()
-        ("TWOK - IMAGINATION IN DETAILS | Help")
-      end
-    end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
 
   end
   describe "About page" do
 
-    it "should have the content 'About'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About')
-    end
+    before { visit about_path }
 
-    it "should have the title 'About Us'" do
-      visit '/static_pages/about'
+    it { should have_content('About') }
+    it { should have_title(full_title('About')) }
+  end
+  describe "Contact Page" do
+    before { visit contact_path }
 
-      def have_title()
-        ("TWOK - IMAGINATION IN DETAILS | About")
-      end
-    end
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
 end
