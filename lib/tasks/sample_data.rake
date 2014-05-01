@@ -28,27 +28,27 @@ end
 def make_teams
   Team.create!(position:     1,
                name:    "Katerina",
-               image: "/assets/Katerina.jpg",
+               image: "/images/Katerina.jpg",
                visible: 1,
                content: "Katerina",)
   Team.create!(position:     2,
                name:    "Nikita",
-               image: "/assets/nikita.jpg",
+               image: "/images/nikita.jpg",
                visible: 1,
                content: "Nikita",)
   Team.create!(position:     3,
                name:    "Irina",
-               image: "/assets/irina.jpg",
+               image: "/images/irina.jpg",
                visible: 1,
                content: "Irina",)
   Team.create!(position:     4,
                name:    "Julia",
-               image: "/assets/julia.jpg",
+               image: "/images/julia.jpg",
                visible: 1,
                content: "Julia",)
   Team.create!(position:     5,
                name:    "Join",
-               image: "/assets/join.jpg",
+               image: "/images/join.jpg",
                visible: 1,
                content: "Join",)
 
