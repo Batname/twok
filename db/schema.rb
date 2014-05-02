@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502192223) do
+ActiveRecord::Schema.define(version: 20140502202519) do
 
   create_table "contactfiles", force: true do |t|
     t.string   "attachment"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140502192223) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "teams", force: true do |t|

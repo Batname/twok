@@ -1,0 +1,16 @@
+<div id="tab">
+  <% check = "checked" %>
+  <% @services.each do |service| %>
+      <input name="table" id="n<%= service.position %>"  <%= check if service.position == 1 %> type="radio">
+      <label for="n<%= service.position %>"><span class="sp<%= service.position %>"><%= service.title %></span></label>
+  <% end %>
+  <div id="table">
+    <% @services.each do |service_1| %>
+        <div>
+          <h3><%= service_1.name %></h3>
+          <p><%= service_1.content %></p>
+          <%=  link_to "wiew service", {:controller => 'services', :action => 'show', :id => service_1.id}, :class => 'action show' %>
+        </div>
+    <% end %>
+  </div>
+</div>
