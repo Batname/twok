@@ -2,7 +2,7 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     make_users
-    #make_microposts
+    make_microposts
     #make_relationships
     make_teams
   end
@@ -52,4 +52,12 @@ def make_teams
                visible: 1,
                content: "Join",)
 
+end
+
+def make_microposts
+  users = User.all[0..10]
+  50.times do
+    content = Faker::Lorem.sentence(5)
+    users.each { |user| user.microposts.create!(content: content) }
+  end
 end
