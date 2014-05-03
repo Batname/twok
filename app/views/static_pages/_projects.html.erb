@@ -2,55 +2,13 @@
   <div id="work">
     <div class="arrow"><%= image_tag("arrow_top.png", style: "width: 30px") %></div>
     <div id="gallery">
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div>
-          <a href="images/gallery/big/big.jpg">
-            <%= image_tag("small.jpg") %>
-          </a>
-        </div>
-      </div>
-    </div>
+      <% @projects.each do |project | %>
+          <div class="item">
+            <div>
+              <%=  link_to(image_tag(project.image, class: "position-class position-class-#{project.position}"), {:controller => 'projects', :action => 'show', :id => project.id}, :class => 'action show') %>
+            </div>
+          </div>
+      <% end %>
   </div>
+</div>
 </div>

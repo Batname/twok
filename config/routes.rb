@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :teams
   resources :services
+  resources :projects
 
   resources :users do
     member do

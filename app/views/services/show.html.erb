@@ -1,1 +1,26 @@
-<%= @service.name %>
+<% if @service.projects.any? %>
+    <div id="work">
+      <div id="gallery">
+        <%= render @projects %>
+      </div>
+    </div>
+<% end %>
+
+<div id="work">
+  <div id="gallery">
+    <% @services.each do |service_1| %>
+        <div class="item">
+          <div>
+            <% if  service_1.id == @current_id.id %>
+
+            <% else %>
+                <%= link_to "wiew service", {:controller => 'services', :action => 'show', :id => service_1.id}, :class => 'action show' %>
+            <% end %>
+
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
