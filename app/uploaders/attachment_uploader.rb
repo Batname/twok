@@ -6,6 +6,6 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   end
 
   def extension_white_list
-    %w(pdf doc htm html docx zip)
+    %w(pdf doc htm html docx zip png)
   end
 end

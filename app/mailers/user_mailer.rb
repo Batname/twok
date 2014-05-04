@@ -9,9 +9,14 @@ class UserMailer < ActionMailer::Base
     imagepath = "/public/"
     imagepath2 = Resume.last.attachment
 
-    attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
 
-    mail(:to => resume.email, :subject => "Hello #{resume.name}")
+    if ! attachments.empty?
+    attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
+    else
+      attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
+    end
+
+    mail(to: resume.email , cc:"dadubinin3@gmail.com", subject: "Hello #{resume.name}")
   end
 end
 
