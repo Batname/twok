@@ -11,7 +11,7 @@ class UserMailer < ActionMailer::Base
 
     attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
 
-    mail(:to => "dadubinin1@gmail.com", :subject => "Registered")
+    mail(:to => resume.email, :subject => "Hello #{resume.name}")
   end
 end
 
