@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502202519) do
+ActiveRecord::Schema.define(version: 20140504011843) do
 
   create_table "contactfiles", force: true do |t|
     t.string   "attachment"
@@ -53,6 +53,15 @@ ActiveRecord::Schema.define(version: 20140502202519) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "resumes", force: true do |t|
+    t.string   "name"
+    t.string   "attachment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "massage"
+  end
 
   create_table "services", force: true do |t|
     t.integer  "position"

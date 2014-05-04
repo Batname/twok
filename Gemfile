@@ -74,3 +74,10 @@ end
 gem "rspec-rails", :group => [:development, :test]
 
 gem 'growl', '1.0.3'
+
+gem 'pony'
+gem 'paperclip'
+
+gem 'mail'
+
+gem 'carrierwave', '~> 0.9'

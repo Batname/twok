@@ -4,23 +4,7 @@
     <div id="contact_panel">
       <div id="left_pan">
         <h3>CONTACT</h3>
-        <form method="post" action="formdata.php" name="form1">
-          <table>
-            <tbody><tr>
-              <td colspan="2"><input name="name" class="name" placeholder="NAME (required)" type="text"></td>
-            </tr>
-            <tr>
-              <td colspan="2"><input name="email" class="email" placeholder="EMAIL (required)" type="text"></td>
-            </tr>
-            <tr>
-              <td colspan="2"><input name="massage" class="massage" placeholder="MASSAGE (required)" type="text"></td>
-            </tr>
-            <tr>
-              <td><%= image_tag("upload.png", style: "width: 170px") %></td>
-              <td><%= image_tag("send.png", style: "width: 170px") %></td>
-            </tr>
-            </tbody></table>
-        </form>
+        <%= render 'form', :inquiry => @inquiry %>
         <br>
       </div>
       <div id="right_pan">
@@ -33,3 +17,7 @@
     </div>
   </div>
 </div>
+
+
+
+

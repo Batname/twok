@@ -14,7 +14,7 @@
             <% if  service_1.id == @current_id.id %>
 
             <% else %>
-                <%= link_to "wiew service", {:controller => 'services', :action => 'show', :id => service_1.id}, :class => 'action show' %>
+                <%= link_to "wiew service", service_path(service_1), :class => 'action show' %>
             <% end %>
 
           </div>

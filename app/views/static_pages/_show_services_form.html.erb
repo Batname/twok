@@ -9,7 +9,7 @@
         <div>
           <h3><%= service_1.name %></h3>
           <p><%= service_1.content %></p>
-          <%=  link_to "wiew service", {:controller => 'services', :action => 'show', :id => service_1.id}, :class => 'action show' %>
+          <%=  link_to "wiew service", service_path(service_1), :class => 'action show' %>
         </div>
     <% end %>
   </div>

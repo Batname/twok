@@ -1,0 +1,52 @@
+<% if !@resume.errors.empty? %>
+    <div class="alert alert-error">
+      <ul>
+        <% @resume.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div id="part6">
+  <div id="contact">
+    <div class="arrow"><%= image_tag("arrow_green.png", style: "width: 30px") %></div>
+    <div id="contact_panel">
+      <div id="left_pan">
+        <h3>CONTACT</h3>
+  <%= form_for @resume, html: { multipart: true } do |f| %>
+      <table>
+        <tbody>
+        <tr>
+          <td colspan="2">
+            <%= f.text_field :name, placeholder: "NAME (required)", class: "name"  %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <%= f.text_field :email, placeholder: "EMAIL (required)", class: "email"  %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <%= f.text_field :massage, placeholder: "MASSAGE (required)", class: "massage" %>
+          </td>
+        </tr>
+        <tr>
+          <td><div class="inputWrapper" style="height: 65px; width: 170px; margin-top: -3px;"><%= f.file_field :attachment, class: "fileInput hidden" %></div></td>
+          <td><%= f.submit "Comment", type: :image, src: "/images/send.png", style: "width: 170px" %></td>
+        </tr>
+        </tbody></table>
+  <% end %>
+        <br>
+      </div>
+      <div id="right_pan">
+        <h3>CONTACT</h3>
+        <ul>
+          <li><a href="tel:+111111111111">+111111111111</a> </li>
+          <li><a href="mailto:index_twok@twok.com">index_twok@twok.com</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
