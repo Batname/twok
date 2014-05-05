@@ -5,9 +5,9 @@ class UserMailer < ActionMailer::Base
     @resume = resume
 
     #imagepath = "/public/resume/attachments/"
-    imagepaid = resume.id
-    imagepath = "/public/"
-    imagepath2 = Resume.last.attachment
+    # imagepaid = resume.id
+    # imagepath = "/public/"
+    # imagepath2 = Resume.last.attachment
 
     #attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
 
