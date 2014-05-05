@@ -17,6 +17,8 @@ class Resume < ActiveRecord::Base
   end
 
 
+  private
+
   def registration_confirmation_notification
     UserMailer.registration_confirmation(self).deliver
   end

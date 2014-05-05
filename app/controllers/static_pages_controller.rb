@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
     end
     @resume = Resume.new
 
+
   end
 
   def help
