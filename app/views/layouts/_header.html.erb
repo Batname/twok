@@ -14,9 +14,9 @@
   <div id="language">
     <div class="lang_table">
       <ul class="lang_tab">
-        <li><%= link_to "ENG", '#' %></li>
-        <li><%= link_to "RUS", '#' %></li>
-        <li><%= link_to "EST", '#' %></li>
+        <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
+        <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
+        <li><%= link_to_unless_current "EST", locale: "es" %></li>
       </ul>
     </div>
   </div>

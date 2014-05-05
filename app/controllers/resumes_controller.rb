@@ -1,6 +1,10 @@
 class ResumesController < ApplicationController
+
+
+
   def index
-    @resumes = Resume.all
+    @resumes = Resume.all.paginate(page: params[:page])
+    @resume = Resume.new
   end
 
   def new
@@ -9,10 +13,8 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.new(resume_params)
-
     if @resume.save
-      UserMailer.registration_confirmation(@resume).deliver
-      redirect_to resumes_path, notice: "The resume #{@resume.name} has been uploaded."
+      redirect_to root_path, notice: "The resume #{@resume.name} has been uploaded."
     else
       render "new"
     end
@@ -28,4 +30,7 @@ class ResumesController < ApplicationController
   def resume_params
     params.require(:resume).permit(:name, :attachment, :email, :massage)
   end
+
+
+
 end

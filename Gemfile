@@ -81,3 +81,5 @@ gem 'paperclip'
 gem 'mail'
 
 gem 'carrierwave', '~> 0.9'
+
+gem 'globalize', '~> 4.0.1'

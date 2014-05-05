@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504011843) do
+ActiveRecord::Schema.define(version: 20140505212710) do
 
   create_table "contactfiles", force: true do |t|
     t.string   "attachment"
@@ -61,7 +61,21 @@ ActiveRecord::Schema.define(version: 20140504011843) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "massage"
+    t.string   "filename"
   end
+
+  create_table "service_translations", force: true do |t|
+    t.integer  "service_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "title"
+    t.text     "content"
+  end
+
+  add_index "service_translations", ["locale"], name: "index_service_translations_on_locale"
+  add_index "service_translations", ["service_id"], name: "index_service_translations_on_service_id"
 
   create_table "services", force: true do |t|
     t.integer  "position"
