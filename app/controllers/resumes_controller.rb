@@ -14,7 +14,7 @@ class ResumesController < ApplicationController
   def create
     @resume = Resume.new(resume_params)
     if @resume.save
-      redirect_to root_path, notice: "The resume #{@resume.name} has been uploaded."
+      redirect_to root_path, alert: "The resume #{@resume.name} has been upload."
     else
       render "new"
     end

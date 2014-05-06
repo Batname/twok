@@ -2,21 +2,34 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", media: "all",
-                             "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all",
+                          "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
 <body>
 <div id="wrapper">
-<%= render 'layouts/header' %>
-  <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <%= render 'layouts/header' %>
+  <% if flash[:notice] %>
+      <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      <% end %>
   <% end %>
-<%= yield %>
-<%= render 'layouts/footer' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
   <%= debug(params) if Rails.env.development? %>
+  <% if flash[:alert] %>
+      <script type="text/javascript">
+          alert("<%= flash[ :alert ] %>");
+      </script>
+  <% end %>
+
 </div>
 </body>
 </html>
+
+
+
+
+
