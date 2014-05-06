@@ -11,7 +11,14 @@ class UserMailer < ActionMailer::Base
 
     #attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
 
-    mail(to: resume.email , cc:"dadubinin3@gmail.com", subject: "Hello #{resume.name}")
+    mail(to: resume.email, subject: "Hello #{resume.name}")
+  end
+
+
+
+  def admin_confirmation(resume)
+    @resume = resume
+    mail(to:"dadubinin3@gmail.com", subject: "Hello #{resume.name}")
   end
 
 end
