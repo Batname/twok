@@ -3,22 +3,33 @@
       <tbody>
       <tr>
         <td colspan="2">
-          <%= f.text_field :name, placeholder: "NAME (required)", class: "name"  %>
+          <%= f.label :name, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
+          <%= f.text_field :name, class: "name"  %>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <%= f.text_field :email, placeholder: "EMAIL (required)", class: "email"  %>
+          <%= f.label :email, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
+          <%= f.text_field :email,  class: "email"  %>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <%= f.text_field :massage, placeholder: "MASSAGE (required)", class: "massage" %>
+          <%= f.label :massage, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
+          <%= f.text_field :massage, class: "massage" %>
         </td>
       </tr>
       <tr>
-        <td><div class="inputWrapper" style="height: 65px; width: 170px; margin-top: -3px;"><%= f.file_field :attachment, class: "fileInput hidden" %></div></td>
-        <td><%= f.submit "Comment", type: :image, src: "/images/send.png", style: "width: 170px" %></td>
+        <td>
+          <div class="input_upload" style="height: 66px; width: 170px;">
+            <%= f.file_field :attachment, class: "fileInput hidden", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
+          </div>
+        </td>
+        <td>
+          <div class="input_send" style="width: 170px; height: 66px;">
+            <%= f.submit "Comment", type: :image, src: "/images/send.png", style: "width: 170px", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
+          </div>
+        </td>
       </tr>
       </tbody></table>
 <% end %>

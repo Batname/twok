@@ -22,6 +22,8 @@ module Twok
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
      # config.i18n.fallbacks = true
+
+    Rails.application.config.assets.precompile += %w( shadowbox.js jquery.js )
   end
 
 

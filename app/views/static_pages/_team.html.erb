@@ -1,48 +1,70 @@
+<!----------------------------part2/6----------------------------------------------------------------->
+
 <div id="part2">
-  <div class="arrow"><%= image_tag("arrow_top.png", style: "width: 30px") %></div>
+  <div id="part_area">
+    <div class="arrow"><%= image_tag("arrow_top.png", style: "width: 30px") %></div>
+    <a id="p2"></a>
 
+    <!---------->
 
-  <!---------->
+    <div id="about">
+      <div id="left_col">
+        <h2><%=t :team_title_1 %></h2>
 
-  <div id="about">
-    <div id="left_col">
-      <h2><%=t :team_title_1 %></h2>
-      <div class="con_about">
-        <p><%=t :team_description_1 %></p>
+        <div class="text_mark"></div>
+        <div class="con_about">
+          <p><%=t :team_description_1 %></p>
+        </div>
+        <h2>WHAT WE DO</h2>
+
+        <div class="text_mark"></div>
+        <div class="con_about">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <p style="margin-top: 15px; padding-bottom: 50px;">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
       </div>
-      <h2>WHAT WE DO</h2>
-      <div class="con_about">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <p style="margin-top: 15px; padding-bottom: 50px;">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-          qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </div>
-    <div id="right_col">
-      <h2>THE TEAM</h2>
+      <div id="right_col">
+        <h2>THE TEAM</h2>
 
-      <div id="team">
-        <div class="col1-position"> <% @teams.each do |team| %>
-            <% if  team.position <= 2 %>
-                <%=  link_to(image_tag(team.image, class: "position-class position-class-#{team.position}"), team_path(team), :class => 'action show') %>
-            <% else %>
-
+        <div class="text_mark"></div>
+        <div id="team">
+          <div class="team_left_side">
+            <% @teams.each do |team| %>
+                <% if  team.position <= 2 %>
+                    <div class="<%= team.teamclass %>">
+                      <span><%= team.name %><em>work</em></span><%= image_tag(team.image) %></div>
+                <% else %>
+                <% end %>
             <% end %>
-          <% end %>
-         </div>
-        <div class="col2-position"> <% @teams.each do |team| %>
-              <% if  team.position >= 3 %>
-                  <%=  link_to(image_tag(team.image, class: "position-class position-class-#{team.position}"), team_path(team), :class => 'action show') %>
-              <% else %>
-
-              <% end %>
-          <% end %>
+          </div>
+          <div class="team_right_side">
+            <% @teams.each do |team| %>
+                <% if  team.position >= 3 && team.position <= 4 %>
+                    <div class="<%= team.teamclass %>">
+                      <span><%= team.name %><em>work</em></span><%= image_tag(team.image) %></div>
+                <% else %>
+                <% end %>
+            <% end %>
+            <div class="joinus">
+              <div class="mask_join">
+                <a href="#p6">
+                  <%= image_tag(@teams.last.image) %>
+                  <%= image_tag("mail-back.png", class: "mailback") %>
+                  <%= image_tag("letter.png", class: "letter") %>
+                  <%= image_tag("mail-front.png", class: "mailfront") %>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

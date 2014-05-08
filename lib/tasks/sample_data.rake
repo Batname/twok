@@ -32,27 +32,32 @@ def make_teams
                name: "Katerina",
                image: "/images/teams/Katerina.jpg",
                visible: 1,
-               content: "Katerina",)
+               content: "Katerina",
+               teamclass: "katerina",)
   Team.create!(position: 2,
                name: "Nikita",
                image: "/images/teams/nikita.jpg",
                visible: 1,
-               content: "Nikita",)
+               content: "Nikita",
+               teamclass: "nikita",)
   Team.create!(position: 3,
                name: "Irina",
                image: "/images/teams/irina.jpg",
                visible: 1,
-               content: "Irina",)
+               content: "Irina",
+               teamclass: "irina",)
   Team.create!(position: 4,
                name: "Julia",
                image: "/images/teams/julia.jpg",
                visible: 1,
-               content: "Julia",)
+               content: "Julia",
+               teamclass: "julia",)
   Team.create!(position: 5,
                name: "Join",
                image: "/images/teams/join.jpg",
                visible: 1,
-               content: "Join",)
+               content: "Join",
+               teamclass: "join",)
 
 end
 
@@ -81,7 +86,10 @@ def make_services
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                  title: "YOUR IMAGE",)
+                  title: "YOUR IMAGE",
+                  head_li: "li1 lin_grad",
+                  head_div: "your_image service_active",
+                  main_div: "your_image_cont",)
   Service.create!(position: 2,
                   name: "TABLE 2",
                   visible: 1,
@@ -93,7 +101,10 @@ def make_services
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                  title: "YOUR AMUSEMENT",)
+                  title: "YOUR AMUSEMENT",
+                  head_li: "li2",
+                  head_div: "your_amusement service_normal",
+                  main_div: "your_amusement_cont",)
   Service.create!(position: 3,
                   name: "TABLE 3",
                   visible: 1,
@@ -101,7 +112,10 @@ def make_services
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                  title: "YOUR COMFORT",)
+                  title: "YOUR COMFORT",
+                  head_li: "li3",
+                  head_div: "your_comfort service_normal",
+                  main_div: "your_comfort_cont",)
   Service.create!(position: 4,
                   name: "TABLE 4",
                   visible: 1,
@@ -117,7 +131,10 @@ def make_services
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                  title: "YOUR PRODUCTIVITY",)
+                  title: "YOUR PRODUCTIVITY",
+                  head_li: "li4",
+                  head_div: "your_productivity service_normal",
+                  main_div: "your_productivity_cont",)
 end
 
 def make_projects

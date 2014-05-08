@@ -1,23 +1,123 @@
+<% if current_page?(root_url) %>
 <div id="part1">
-  <div id="nav">
-    <ul>
-      <li><%= link_to "ABOUT", about_path %></li>
-      <li><%= link_to "SERVICES", '#' %></li>
-      <li><%= link_to "WORK", '#' %></li>
-      <li><%= link_to "CONTACT", contact_path %></li>
-    </ul>
-    <div class="nav_button"><%= link_to image_tag("menu-button.png", alt: "Rails", style: "width: 35px"), '#' %> </div>
+  <div id="sec_nav">
+    <div id="part_area">
+      <div id="main_nav_sec">
+        <ul>
+          <li>
+            <div class="top_button_sec">
+              <a href="#p7"><%= image_tag("top-button.png") %></a>
+            </div>
+          </li>
+          <li>
+            <div id="menu_nav_sec">
+              <ul>
+                <li><a href="#p2">ABOUT</a></li>
+                <li><a href="#p3">SERVICES</a></li>
+                <li><a href="#p4">WORK</a></li>
+                <li><a href="#p6">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="nav_button_sec"><%= image_tag("menu-button.png") %></div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="logo">
-    <%= link_to image_tag("title.png", alt: "Rails", style: "width: 500px"), root_path %>
-  </div>
-  <div id="language">
-    <div class="lang_table">
-      <ul class="lang_tab">
-        <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
-        <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
-        <li><%= link_to_unless_current "EST", locale: "es" %></li>
-      </ul>
+  <div id="part_area">
+    <a id="p7"></a>
+    <div id="nav">
+      <div id="main_nav">
+        <ul>
+          <li>
+            <div id="menu_nav">
+              <ul>
+                <li><a href="#p2">ABOUT</a></li>
+                <li><a href="#p3">SERVICES</a></li>
+                <li><a href="#p4">WORK</a></li>
+                <li><a href="#p6">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="nav_button"><%= image_tag("menu-button.png") %></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!---------->
+
+    <div id="logo_gab">
+      <div class="logo">
+        <div class="logo-bg"><%= image_tag("title-bg.png") %></div>
+        <%= image_tag("title.png") %>
+      </div>
+    </div>
+
+    <!---------->
+
+    <div id="language">
+      <div class="lang_table">
+        <ul class="lang_tab">
+          <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
+          <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
+          <li><%= link_to_unless_current "EST", locale: "es" %></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
+  <% else %>
+    <div id="part1">
+      <div id="part_area">
+        <a id="p7"></a>
+        <div id="nav">
+          <div id="main_nav">
+            <ul>
+              <li>
+                <div id="menu_nav">
+                  <ul>
+                    <li><%= link_to "ABOUT", root_path %></li>
+                    <li><%= link_to "SERVICES", root_path %></li>
+                    <li><%= link_to "WORK", root_path %></li>
+                    <li><%= link_to "CONTACT", root_path %></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="nav_button"><%= image_tag("menu-button.png") %></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!---------->
+
+        <div id="logo_gab">
+          <div class="logo">
+            <div class="logo-bg"><%= link_to image_tag("title-bg.png",), root_path %></div>
+            <%= image_tag("title.png") %>
+          </div>
+        </div>
+
+        <!---------->
+
+        <div id="language">
+          <div class="lang_table">
+            <ul class="lang_tab">
+              <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
+              <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
+              <li><%= link_to_unless_current "EST", locale: "es" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>

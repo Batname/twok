@@ -17,7 +17,6 @@ class Resume < ActiveRecord::Base
     self.filename = attachment.url
   end
 
-
   private
 
   def registration_confirmation_notification

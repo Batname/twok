@@ -2,9 +2,18 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag "application", media: "all",
-                          "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+
+  <% if current_page?(root_url) %>
+      <%= javascript_include_tag 'jquery1' %>
+      <%= javascript_include_tag 'jquery.scrollTo' %>
+      <%= javascript_include_tag 'jQueryRotateCompressed' %>
+      <%= javascript_include_tag 'script' %>
+      <%= javascript_include_tag 'shadowbox' %>
+  <% else %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <% end %>
+
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>

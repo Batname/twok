@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505212710) do
+ActiveRecord::Schema.define(version: 20140508100506) do
 
   create_table "contactfiles", force: true do |t|
     t.string   "attachment"
@@ -86,6 +86,9 @@ ActiveRecord::Schema.define(version: 20140505212710) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "head_li"
+    t.string   "head_div"
+    t.string   "main_div"
   end
 
   create_table "teams", force: true do |t|
@@ -96,6 +99,7 @@ ActiveRecord::Schema.define(version: 20140505212710) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "teamclass"
   end
 
   create_table "users", force: true do |t|

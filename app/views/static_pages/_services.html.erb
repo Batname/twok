@@ -1,9 +1,29 @@
+<!----------------------------part3/6----------------------------------------------------------------->
+
 <div id="part3">
-  <div id="services">
-    <div class="arrow"><%= image_tag("arrow_buttom.png", style: "width: 30px") %></div>
-    <h2>OUR SERVICES</h2>
-    <%= render 'show_services_form' %>
+  <div id="part_area">
+    <div id="services">
+      <div class="arrow"><%= image_tag("arrow_buttom.png", style: "width: 30px") %></div>
+      <a id="p3"></a>
+      <h2>OUR SERVICES</h2>
+      <div class="text_mark"></div>
+      <div id="headservicecontainer">
+        <ul>
+          <% @services.each do |service| %>
+              <li class="<%= service.head_li %>"><div class="<%= service.head_div %>"><%= service.title %></div></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="services_border" style="border: 2px solid #196553"></div>
+
+  <div id="part_area">
+    <div class="ser_cont_bord">
+      <% @services.each do |service| %>
+          <div class="<%= service.main_div %>"><p><%= service.content %></p></div>
+      <% end %>
+    </div>
   </div>
 </div>
-
-

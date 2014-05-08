@@ -1,14 +1,21 @@
+<!----------------------------part4/6----------------------------------------------------------------->
+
 <div id="part4">
-  <div id="work">
-    <div class="arrow"><%= image_tag("arrow_top.png", style: "width: 30px") %></div>
-    <div id="gallery">
-      <% @projects.each do |project | %>
-          <div class="item">
-            <div>
-              <%=  link_to(image_tag(project.image, class: "position-class position-class-#{project.position}"), project_path(project), :class => 'action show') %>
-            </div>
+  <div id="part_area">
+    <div id="work">
+      <div class="arrow"><%= image_tag("arrow_top.png", style: "width: 30px") %></div>
+      <a id="p4"></a>
+      <div id="gallery">
+        <% @projects.each do |project | %>
+        <div class="item">
+          <div>
+            <a href="images/gallery/big/big.jpg" rel="shadowbox[Vacation]">
+              <%= image_tag (project.image) %>
+            </a>
           </div>
-      <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
 </div>

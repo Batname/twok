@@ -26,6 +26,7 @@ class ResumesController < ApplicationController
     redirect_to resumes_path, notice: "The resume #{@resume.name} has been deleted."
   end
 
+
   private
   def resume_params
     params.require(:resume).permit(:name, :attachment, :email, :massage)

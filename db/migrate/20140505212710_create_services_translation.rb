@@ -10,6 +10,6 @@ class CreateServicesTranslation < ActiveRecord::Migration
   end
 
   def self.down
-    Post.drop_translation_table! :migrate_data => true
+    Service.drop_translation_table! :migrate_data => true
   end
 end
