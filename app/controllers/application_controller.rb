@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
 
   # upload error
-  protect_from_forgery with: :exception
-  #protect_from_forgery
+  #protect_from_forgery with: :exception
+  protect_from_forgery
 
   include SessionsHelper
 
