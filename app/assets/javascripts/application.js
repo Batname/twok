@@ -16,4 +16,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.remotipart
+//= require comments
 //= require_tree .

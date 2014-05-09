@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
+
+  # upload error
   protect_from_forgery with: :exception
+  #protect_from_forgery
+
   include SessionsHelper
 
   before_filter :set_locale

@@ -1,8 +1,8 @@
 class UserMailer < ActionMailer::Base
   default :from => "dadubinin@gmail.com"
 
-  def registration_confirmation(resume)
-    @resume = resume
+  def registration_confirmation(comment)
+    @comment = comment
 
     #imagepath = "/public/resume/attachments/"
     # imagepaid = resume.id
@@ -11,14 +11,14 @@ class UserMailer < ActionMailer::Base
 
     #attachments[resume.attachment.identifier] = File.read("#{Rails.root}/public#{imagepath2}")
 
-    mail(to: resume.email, subject: "Hello #{resume.name}")
+    mail(to: comment.email, subject: "Hello #{comment.subject}")
   end
 
 
 
-  def admin_confirmation(resume)
-    @resume = resume
-    mail(to:"dadubinin3@gmail.com", subject: "Hello #{resume.name}")
+  def admin_confirmation(comment)
+    @comment = comment
+    mail(to:"dadubinin3@gmail.com", subject: "Hello #{comment.subject}")
   end
 
 end

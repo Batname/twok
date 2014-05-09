@@ -1,15 +1,15 @@
 <div id="footer">
   <div class="left_size">
-    <p>TWOK LLC © 2014 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary", style: "display: none" %></p>
+    <p>TWOK LLC © 2014</p>
 
   </div>
   <div class="right_size">
     <ul>
 
-      <li><a href="#"><img src="/images/facebook-norm.png" onmouseover="this .src='/images/facebook-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/facebook-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
-      <li><a href="#"><img src="/images/facebook-norm.png" onmouseover="this .src='/images/facebook-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/facebook-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
-      <li><a href="#"><img src="/images/facebook-norm.png" onmouseover="this .src='/images/facebook-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/facebook-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
-      <li><a href="#"><img src="/images/facebook-norm.png" onmouseover="this .src='/images/facebook-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/facebook-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
+      <li><a href="#"><img src="/images/social/facebook-norm.png" onmouseover="this .src='/images/social/facebook-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/social/facebook-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
+      <li><a href="#"><img src="/images/social/linkedin-norm.png" onmouseover="this .src='/images/social/linkedin-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/social/linkedin-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
+      <li><a href="#"><img src="/images/social/twitter-norm.png" onmouseover="this .src='/images/social/twitter-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/social/twitter-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
+      <li><a href="#"><img src="/images/social/beh-norm.png" onmouseover="this .src='/images/social/beh-sel.png'; this .width=40; this .height=40" onmouseout="this .src='/images/social/beh-norm.png'; this .width=40; this .height=40" height="40" width="40"></a> </li>
     </ul>
   </div>
 </div>
@@ -22,7 +22,6 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
 
               <li><%= link_to "Users", users_path %></li>
               <li id="fat-menu" class="dropdown">
@@ -30,6 +29,7 @@
                   Account <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+                  <li><%= link_to "Comments", comments_path %></li>
                   <li><%= link_to "Profile", current_user %></li>
                   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                   <li class="divider"></li>

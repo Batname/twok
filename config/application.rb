@@ -21,9 +21,12 @@ module Twok
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
+    #config.action_view.embed_authenticity_token_in_remote_forms = true
+
      # config.i18n.fallbacks = true
 
-    Rails.application.config.assets.precompile += %w( shadowbox.js jquery.js )
+    Rails.application.config.assets.precompile += %w( application-home.js )
+
   end
 
 

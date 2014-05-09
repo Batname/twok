@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508100506) do
+ActiveRecord::Schema.define(version: 20140509063909) do
 
-  create_table "contactfiles", force: true do |t|
-    t.string   "attachment"
+  create_table "comments", force: true do |t|
+    t.string   "subject"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.string   "other_attachment_file_name"
+    t.string   "other_attachment_content_type"
+    t.integer  "other_attachment_file_size"
+    t.datetime "other_attachment_updated_at"
+    t.string   "email"
   end
 
   create_table "microposts", force: true do |t|
@@ -53,16 +63,6 @@ ActiveRecord::Schema.define(version: 20140508100506) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
-
-  create_table "resumes", force: true do |t|
-    t.string   "name"
-    t.string   "attachment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "email"
-    t.string   "massage"
-    t.string   "filename"
-  end
 
   create_table "service_translations", force: true do |t|
     t.integer  "service_id", null: false

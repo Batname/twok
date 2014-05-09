@@ -40,6 +40,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 ## Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -74,13 +75,9 @@ end
 gem "rspec-rails", :group => [:development, :test]
 
 gem 'growl', '1.0.3'
-
-gem 'pony'
-gem 'paperclip'
-
 gem 'mail'
-
-gem 'carrierwave', '~> 0.9'
-
 gem 'globalize', '~> 4.0.1'
-
+gem 'remotipart'#, :path => '../remotipart'
+gem 'paperclip'
+gem 'selenium-webdriver'
+gem 'launchy'

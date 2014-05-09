@@ -1,34 +1,44 @@
-<%= form_for @resume, html: { multipart: true } do |f| %>
+<%= form_for(Comment.new, :remote => (params[:action] == 'new' ? true : false)) do |f| %>
+    <% if Comment.new.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+          <ul>
+            <% Comment.new.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <table>
       <tbody>
       <tr>
         <td colspan="2">
-          <%= f.label :name, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
-          <%= f.text_field :name, class: "name"  %>
+        <%= f.label :subject, class: 'required leb_name' %> <span>(required)</span>
+        <%= f.text_field :subject, class: "name", required: true %>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <%= f.label :email, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
-          <%= f.text_field :email,  class: "email"  %>
+        <%= f.label :email, class: 'required leb_name' %> <span>(required)</span>
+        <%= f.text_field :email, class: "email", required: true %>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <%= f.label :massage, class: "leb_name", style: "text-transform:uppercase;" %><span>(required)</span>
-          <%= f.text_field :massage, class: "massage" %>
+        <%= f.label :body, class: 'required leb_name' %> <span>(required)</span>
+        <%= f.text_area :body, class: "massage", required: true  %>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="input_upload" style="height: 66px; width: 170px;">
-          <%= f.file_field :attachment, class: "fileInput hidden", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
-        </div>
+    <div class="input_upload" style="height: 66px; width: 170px;">
+      <%= f.file_field :attachment, class: "fileInput hidden", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
+    </div>
         </td>
         <td>
-          <div class="input_send" style="width: 170px; height: 66px;">
-          <%= f.submit "Comment", type: :image, src: "/images/send.png", style: "width: 170px", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
-          </div>
+    <div class="input_send" style="width: 170px; height: 66px;">
+      <%= f.submit "Comment", type: :image, src: "/images/send.png", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 170px; height: 66px" %>
+    </div>
         </td>
       </tr>
       </tbody></table>
