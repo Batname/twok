@@ -49,6 +49,49 @@
     </div>
 
 
+    <!-----language------------>
+
+    <div id="language">
+      <div class="lang_table">
+        <ul class="lang_tab">
+          <li class="rus_list">
+            <%= link_to('ru') do %>
+                <div class="rus_cont"></div>
+            <% end %>
+          <li class="eng_list">
+            <%= link_to('en') do %>
+                <div class="eng_cont"></div>
+            <% end %>
+          </li>
+          <li class="est_list">
+            <%= link_to('es') do %>
+                <div class="est_cont"></div>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-----language------------>
+
+    <div id="language">
+      <div class="lang_table">
+        <ul class="lang_tab">
+          <li class="rus_list"><a href="#">
+            <div class="rus_cont"></div>
+          </a> </li>
+          <li class="eng_list"><a href="#">
+            <div class="eng_cont"></div>
+          </a></li>
+          <li class="est_list"><a href="#">
+            <div class="est_cont"></div>
+          </a> </li>
+        </ul>
+      </div>
+    </div>
+
 
     <!---------->
 
@@ -59,17 +102,9 @@
       </div>
     </div>
 
-    <!---------->
 
-    <div id="language">
-      <div class="lang_table">
-        <ul class="lang_tab">
-          <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
-          <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
-          <li><%= link_to_unless_current "EST", locale: "es" %></li>
-        </ul>
-      </div>
-    </div>
+
+
   </div>
 </div>
 
@@ -121,3 +156,5 @@
     </div>
 
   <% end %>
+
+

@@ -603,6 +603,83 @@ textarea{
 }
 
 
+/*---------------------------language---------------------------------------------------------*/
+
+#language{
+  width: 1200px;
+  /*border: 1px solid #fff;*/
+  overflow: hidden;
+  height: 65px;
+  margin-top: 95px;
+  margin-bottom: 126px;
+}
+
+.lang_table{
+  float: right;
+  right: 50%;
+  position: relative;
+}
+
+.lang_tab{
+  float: left;
+  left: 50%;
+  position: relative;
+}
+
+.lang_tab li{
+  /*border: 1px solid #fff;*/
+  float: left;
+  width: 65px;
+  margin: 0 8px;
+  overflow: hidden;
+  height: 65px;
+}
+
+
+.eng_list{
+  background: url(image-path('eng_big.png')) center;
+}
+
+.rus_list{
+  background: url(image-path('rus_big.png')) center;
+}
+
+.est_list{
+  background:url(image-path('est_big.png'))  center;
+}
+
+.eng_cont{
+  width: 65px;
+  height: 65px;
+  background:url(image-path('eng_sm.png')) center;
+}
+
+.rus_cont{
+  width: 65px;
+  height: 65px;
+  background: url(image-path('rus_sm.png')) center;
+}
+
+.est_cont{
+  width: 65px;
+  height: 65px;
+  background: url(image-path('est_sm.png')) center;
+}
+
+.eng_cont:hover{
+  background:url(image-path('eng_big.png')) center;
+}
+
+.rus_cont:hover{
+  background:url(image-path('rus_big.png')) center;
+}
+
+.est_cont:hover{
+  background: url(image-path('est_big.png'))center;
+}
+
+
+
 /*-----------------------------------------Shadowbox-----------------------------------------------------*/
 
 #sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:200;color:#fff;}
