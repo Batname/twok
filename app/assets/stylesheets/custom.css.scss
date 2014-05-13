@@ -73,6 +73,8 @@ body{
   overflow: hidden;
   float: right;
   margin-right: 200px;
+
+
 }
 
 #main_nav_sec ul li{
@@ -166,53 +168,6 @@ body{
   width: 100%;
 }
 
-/*------------------------------------------------------------------------------------*/
-
-#language{
-  width: 100%;
-  /*border: 1px solid #fff;*/
-  overflow: hidden;
-}
-
-.lang_table{
-  float: right;
-  right: 50%;
-  position: relative;
-}
-
-.lang_tab{
-  float: left;
-  left: 50%;
-  position: relative;
-}
-
-.lang_tab li{
-  height: 15px;
-  /*border: 1px solid #fff;*/
-  padding: 5px 7px;
-  float: left;
-  margin: 40px 0 30px 0;
-  font-size: 13px;
-  cursor: default;
-  color: #fdb53f;
-  font-weight: bold;
-}
-
-.lang_tab li a{
-  color: #5f5a3f;
-  /*line-height: 35px;*/
-  display: block;
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.lang_tab li a:hover{
-  color: #fdb53f;
-}
-
-.lang_tab li a:active{
-  color: #fdb53f;
-}
 
 /*----------------------------part 2------------------------------------------*/
 
@@ -633,49 +588,50 @@ textarea{
   margin: 0 8px;
   overflow: hidden;
   height: 65px;
+  width: 65px;
 }
 
 
 .eng_list{
-  background: url(image-path('eng_big.png')) center;
+  background: url(image-path('eng_big.png')) no-repeat center;
 }
 
 .rus_list{
-  background: url(image-path('rus_big.png')) center;
+  background: url(image-path('rus_big.png')) no-repeat center;
 }
 
 .est_list{
-  background:url(image-path('est_big.png'))  center;
+  background:url(image-path('est_big.png')) no-repeat center;
 }
 
 .eng_cont{
   width: 65px;
   height: 65px;
-  background:url(image-path('eng_sm.png')) center;
+  background:url(image-path('eng_sm.png')) no-repeat center;
 }
 
 .rus_cont{
   width: 65px;
   height: 65px;
-  background: url(image-path('rus_sm.png')) center;
+  background: url(image-path('rus_sm.png')) no-repeat center;
 }
 
 .est_cont{
   width: 65px;
   height: 65px;
-  background: url(image-path('est_sm.png')) center;
+  background: url(image-path('est_sm.png')) no-repeat center;
 }
 
 .eng_cont:hover{
-  background:url(image-path('eng_big.png')) center;
+  background:url(image-path('eng_big.png')) no-repeat center;
 }
 
 .rus_cont:hover{
-  background:url(image-path('rus_big.png')) center;
+  background:url(image-path('rus_big.png')) no-repeat center;
 }
 
 .est_cont:hover{
-  background: url(image-path('est_big.png'))center;
+  background: url(image-path('est_big.png')) no-repeat center;
 }
 
 
